@@ -37,9 +37,17 @@ public class Client {
         System.out.println("\nUndoing another command:");
         remote.undoLastCommand(); // Output: The light is OFF.
 
-//      Attempt to undo with no commands left
-        System.out.println("\nUndoing with no commands left:");
-        remote.undoLastCommand(); // Output: No commands to undo.
+////      Attempt to undo with no commands left
+//        System.out.println("\nUndoing with no commands left:");
+//        remote.undoLastCommand(); // Output: No commands to undo.
+        
+//      Redo last undone command
+        System.out.println("\nRedoing another command:");
+        remote.redoLastCommand(); // Output: The light is OFF.
+
+//      Attempt to redo with no commands left
+        System.out.println("\nRedoing with no commands left:");
+        remote.redoLastCommand(); // Output: No commands to redo.
 		
 	}
 
