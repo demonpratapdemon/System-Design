@@ -3,6 +3,9 @@
  */
 package LLD.DesignPattern.CommandDesignPattern;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author LENOVO
  *
@@ -49,6 +52,8 @@ public class Client {
         System.out.println("\nRedoing with no commands left:");
         remote.redoLastCommand(); // Output: No commands to redo.
 		
+        List<Integer>  list = new ArrayList<Integer>();
+        list.iterator();
 	}
 
 }
