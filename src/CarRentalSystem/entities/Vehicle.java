@@ -7,11 +7,11 @@ abstract public class Vehicle {
 
 	private String vehicleId;
 	private VehicleType vehicleType;
+	private VehicleStatus vehicleStatus;
+	private Location vehicleLocation;
 	private String model;
 	private String make;
 	private String registrationNumber;
-	private VehicleStatus vehicleStatus;
-	private Location vehicleLocation;
 
 	public Vehicle(String vehicleId, VehicleType vehicleType, String model, String make, String registrationNumber,
 			VehicleStatus vehicleStatus, Location vehicleLocation) {
@@ -83,5 +83,4 @@ abstract public class Vehicle {
 				+ ", vehicleLocation=" + vehicleLocation + "]";
 	}
 
-	
 }

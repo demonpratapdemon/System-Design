@@ -36,8 +36,6 @@ public class Store {
 		}
 		return sv;
 	}
-	
-	
 
 	public String getStoreId() {
 		return storeId;
@@ -74,7 +72,7 @@ public class Store {
 		r.getVehicle().setStatus(VehicleStatus.AVAILABLE);
 		r.getVehicle().setParkedAt(r.getDrop());
 	}
-	
+
 	public void cancelReservation(String reservationId) {
 		Reservation r = reservations.get(reservationId);
 		r.setStatus(ReservationStatus.CANCELLED);

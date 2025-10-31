@@ -14,7 +14,7 @@ public class ParkingSpot {
 		this.spotId = spotId;
 		this.spotSize = spotSize;
 		this.isOccupied = false;
-		this.parkedVehicle = null;
+		this.setParkedVehicle(null);
 	}
 
 	public String getSpotId() {
@@ -34,12 +34,12 @@ public class ParkingSpot {
 	}
 
 	public synchronized void parkVehicle(Vehicle vehicle) {
-		this.parkedVehicle = vehicle;
+		this.setParkedVehicle(vehicle);
 		this.isOccupied = true;
 	}
 
 	public synchronized void unparkVehicle() {
-		this.parkedVehicle = null;
+		this.setParkedVehicle(null);
 		this.isOccupied = false;
 	}
 
@@ -61,5 +61,13 @@ public class ParkingSpot {
 			return false;
 		}
 		}
+	}
+
+	public Vehicle getParkedVehicle() {
+		return parkedVehicle;
+	}
+
+	public void setParkedVehicle(Vehicle parkedVehicle) {
+		this.parkedVehicle = parkedVehicle;
 	}
 }
